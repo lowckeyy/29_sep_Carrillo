@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Test in the Cloud - Camila Keilany</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+    </style>
+</head>
+<body class="h-full bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800 text-slate-800 flex items-center justify-center p-4 sm:p-6 overflow-x-hidden relative">
+
+    <div class="absolute top-1/4 left-1/4 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse-slow pointer-events-none"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse-slow pointer-events-none" style="animation-delay: 2s;"></div>
+
+    <main class="w-full max-w-xl z-10">
+        <div class="glass-card shadow-2xl rounded-3xl p-8 sm:p-12 text-center transform transition-all duration-500 hover:shadow-pink-500/10 animate-float">
+            
+            <div class="mx-auto w-20 h-20 bg-gradient-to-tr from-pink-500 to-violet-600 rounded-2xl shadow-lg flex items-center justify-center text-white text-3xl font-bold mb-6 transform rotate-3 hover:rotate-6 transition-transform">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+            </div>
+
+            <div class="inline-block mb-4 px-4 py-1.5 bg-indigo-100 text-indigo-700 rounded-full text-xs font-semibold tracking-wider uppercase">
+                <i class="fa-solid fa-sparkles mr-1"></i> Frontend in the Cloud
+            </div>
+
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-3 leading-tight">
+                This is my first test of frontend in the Cloud
+            </h1>
+
+            <h2 class="text-lg sm:text-xl font-medium text-purple-700 mb-8 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-user-pen text-pink-500 text-base"></i>
+                <span>Camila Keilany Carrillo Fuentes</span>
+            </h2>
+
+            <div class="flex flex-col gap-3.5 pt-4 border-t border-slate-200/60">
+                
+                <!-- Button 1: Idea Millonaria (Main Link) -->
+                <a href="../Topicos de Calidad/ideamillonaria.html" 
+                   class="w-full inline-flex items-center justify-center px-6 py-4 bg-gradient-to-r from-pink-600 to-purple-600 text-white font-semibold rounded-2xl shadow-lg shadow-pink-500/25 hover:shadow-pink-500/40 transform hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 group">
+                    <i class="fa-solid fa-lightbulb mr-2.5 text-yellow-300 group-hover:rotate-12 transition-transform"></i>
+                    <span>Idea Millonaria</span>
+                    <i class="fa-solid fa-arrow-right ml-auto text-xs opacity-80 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+
+                <!-- Button 2: Interactive Celebration Trigger -->
+
+                <a href="../Topicos de Calidad/dinero.html" 
+                   class="w-full inline-flex items-center justify-center px-6 py-4 bg-gradient-to-r from-pink-600 to-purple-600 text-white font-semibold rounded-2xl shadow-lg shadow-pink-500/25 hover:shadow-pink-500/40 transform hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 group">
+                    <i class="fa-solid fa-lightbulb mr-2.5 text-yellow-300 group-hover:rotate-12 transition-transform"></i>
+                    <span>Dinero</span>
+                    <i class="fa-solid fa-arrow-right ml-auto text-xs opacity-80 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+
+                <!-- Button 3: Source Code / Info Modal Trigger -->
+                <a href="../Topicos de Calidad/dinero.html" 
+                   class="w-full inline-flex items-center justify-center px-6 py-4 bg-gradient-to-r from-pink-600 to-purple-600 text-white font-semibold rounded-2xl shadow-lg shadow-pink-500/25 hover:shadow-pink-500/40 transform hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 group">
+                    <i class="fa-solid fa-lightbulb mr-2.5 text-yellow-300 group-hover:rotate-12 transition-transform"></i>
+                    <span>clientes</span>
+                    <i class="fa-solid fa-arrow-right ml-auto text-xs opacity-80 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+
+            </div>
+
+            <!-- Modal or Toast notification container -->
+            <div id="notification" class="hidden mt-6 p-4 bg-purple-50 border border-purple-200 rounded-2xl text-purple-800 text-sm font-medium animate-bounce">
+                ✨ ¡Excelente trabajo en tu primer despliegue en la nube, Camila! 🚀
+            </div>
+
+            <div class="mt-8 text-xs text-slate-400 font-medium flex items-center justify-center gap-1.5">
+                <i class="fa-regular fa-circle-check text-emerald-500"></i> Cloud Deployed & Ready
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Camila Keilany frontend test loaded successfully.');
+        });
+
+        function triggerCelebration() {
+            const notif = document.getElementById('notification');
+            notif.classList.remove('hidden');
+            setTimeout(() => {
+                notif.classList.add('hidden');
+            }, 4000);
+        }
+
+        function showInfo() {
+            const notif = document.getElementById('notification');
+            notif.innerHTML = '☁️ <strong>Cloud Info:</strong> Frontend desplegado correctamente usando Tailwind CSS y componentes responsivos.';
+            notif.classList.remove('hidden');
+            setTimeout(() => {
+                notif.classList.add('hidden');
+            }, 4000);
+        }
+    </script>
+</body>
+</html>
